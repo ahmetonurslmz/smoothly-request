@@ -11,6 +11,10 @@
     "request"
   ],
   "homepage": "https://github.com/ahmetonurslmz/smoothly-request.git",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ahmetonurslmz/smoothly-request.git"
+  },
   "author": "Ahmet Onur Solmaz",
   "email": "ahmetonurslmz@gmail.com",
   "url": "https://ahmetonursolmaz.com.tr",
