@@ -1,8 +1,9 @@
 name: Smoothly Request
 
 on:
-  release:
-    types: [created]
+  push:
+    branches:
+      - main
 
 jobs:
   publish-gpr:
