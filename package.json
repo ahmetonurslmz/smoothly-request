@@ -4,11 +4,11 @@
   "description": "Perform request with promise based client on NodeJS",
   "main": "index.js",
   "keywords": [
-    "request",
     "smooth",
-    "request",
     "simple",
-    "request"
+    "request",
+    "promise",
+    "nodejs"
   ],
   "homepage": "https://github.com/ahmetonurslmz/smoothly-request.git",
   "repository": {
