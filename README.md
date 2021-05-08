@@ -23,10 +23,10 @@ $ npm install smoothly-request
 Performing a `GET` request
 
 ```js
-const smoothlyhRequest = require('smoothly-request');
+const smoothlyRequest = require('smoothly-request');
 
 (async () => {
-  const result = await smoothlyhRequest({
+  const result = await smoothlyRequest({
       hostname: `https://ahmetonursolmaz.com.tr`,
       path: '/users/2',
       method: 'GET'
@@ -37,10 +37,10 @@ const smoothlyhRequest = require('smoothly-request');
 Performing a `POST` request
 
 ```js
-const smoothlyhRequest = require('smoothly-request');
+const smoothlyRequest = require('smoothly-request');
 
 (async () => {
-  const result = await smoothlyhRequest({
+  const result = await smoothlyRequest({
       hostname: `https://ahmetonursolmaz.com.tr`,
       path: '/users',
       method: 'POST',
@@ -52,10 +52,10 @@ const smoothlyhRequest = require('smoothly-request');
 Performing `an another` request
 
 ```js
-const smoothlyhRequest = require('smoothly-request');
+const smoothlyRequest = require('smoothly-request');
 
 (async () => {
-  const result = await smoothlyhRequest({
+  const result = await smoothlyRequest({
       hostname: `https://ahmetonursolmaz.com.tr`,
       path: '/users/2',
       method: 'PATCH',
@@ -65,7 +65,7 @@ const smoothlyhRequest = require('smoothly-request');
 
 
 (async () => {
-    const result = await smoothlyhRequest({
+    const result = await smoothlyRequest({
         hostname: `https://ahmetonursolmaz.com.tr`,
         path: '/users/2',
         method: 'DELETE',
