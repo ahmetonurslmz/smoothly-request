@@ -1,6 +1,6 @@
 {
   "name": "smoothly-request",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Perform request with promise based client on NodeJS",
   "main": "index.js",
   "keywords": [
