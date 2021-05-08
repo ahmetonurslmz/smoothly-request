@@ -1,4 +1,9 @@
-# Smoothly Request
+[![Dependencies](https://david-dm.org/ahmetonurslmz/smoothly-request.svg)](https://david-dm.org/ahmetonurslmz/smoothly-request)
+[![devDependencies](https://status.david-dm.org/gh/ahmetonurslmz/smoothly-request.svg?type=dev)](https://david-dm.org/ahmetonurslmz/smoothly-request)
+[![npm version](https://badge.fury.io/js/smoothly-request.svg)](https://badge.fury.io/js/smoothly-request)
+
+Smoothly request
+=============
 Perform request with promise based client on NodeJS
 
 Smoothly request enables developer to send request with promise based client on NodeJS. The package generally was designed for cloud functions (aws lambda, google functions etc.), and it has a little unpacked size.
