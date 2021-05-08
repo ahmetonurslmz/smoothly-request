@@ -2,7 +2,17 @@ const http = require('http');
 const https = require('https');
 
 
-const request = async ({ hostname, path, method = 'GET', payload = null }) => {
+const pathChecker = (path) => {
+    if (path && path[0] === '/') {
+        return path;
+    } else if (path) {
+        return `/${path}`;
+    }
+    return '/';
+};
+
+
+const request = async ({ hostname, path = '/', method = 'GET', payload = null }) => {
     const isHttps = hostname.startsWith('https://');
 
     const lib = isHttps ? https : http;
@@ -12,7 +22,7 @@ const request = async ({ hostname, path, method = 'GET', payload = null }) => {
         method,
         hostname: domain,
         port: isHttps ? 443 : 80,
-        path: path || '/',
+        path: pathChecker(path),
         headers: {
             'User-Agent': 'AOS',
         }
