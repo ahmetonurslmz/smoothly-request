@@ -1,6 +1,7 @@
 [![Build Status](https://travis-ci.com/ahmetonurslmz/smoothly-request.svg?branch=main)](https://travis-ci.com/ahmetonurslmz/smoothly-request)
 [![Dependencies](https://david-dm.org/ahmetonurslmz/smoothly-request.svg)](https://david-dm.org/ahmetonurslmz/smoothly-request)
 [![devDependencies](https://status.david-dm.org/gh/ahmetonurslmz/smoothly-request.svg?type=dev)](https://david-dm.org/ahmetonurslmz/smoothly-request)
+[![install size](https://packagephobia.com/badge?p=smoothly-request)](https://packagephobia.com/result?p=smoothly-request)
 [![npm version](https://badge.fury.io/js/smoothly-request.svg)](https://badge.fury.io/js/smoothly-request)
 
 Smoothly request
