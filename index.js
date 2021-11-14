@@ -12,7 +12,7 @@ const pathChecker = (path) => {
 };
 
 
-const request = async ({ hostname, path = '/', method = 'GET', payload = null }) => {
+const request = async ({ hostname, path = '/', method = 'GET', payload = null, isJson = true }) => {
     const isHttps = hostname.startsWith('https://');
 
     const lib = isHttps ? https : http;
@@ -40,7 +40,12 @@ const request = async ({ hostname, path = '/', method = 'GET', payload = null })
                 data.push(chunk);
             });
 
-            res.on('end', () => resolve(Buffer.concat(data).toString()));
+            res.on('end', () => resolve((() => {
+                if (isJson) {
+                    return JSON.parse(Buffer.concat(data).toString());
+                }
+                return Buffer.concat(data).toString();
+            })()));
         });
 
         req.on('error', reject);
