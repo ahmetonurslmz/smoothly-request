@@ -12,7 +12,7 @@ const pathChecker = (path) => {
 };
 
 
-const request = async ({ hostname, path = '/', method = 'GET', payload = null, isJson = true }) => {
+const request = async ({ hostname, path = '/', method = 'GET', payload = null, isJson = false }) => {
     const isHttps = hostname.startsWith('https://');
 
     const lib = isHttps ? https : http;
