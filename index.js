@@ -28,6 +28,10 @@ const request = async ({ hostname, path = '/', method = 'GET', payload = null, i
         }
     };
 
+    if (isJson) {
+        options.headers['Content-Type'] = 'application/json';
+    }
+
     return new Promise((resolve, reject) => {
         const req = lib.request(options, res => {
             if (res.statusCode < 200 || res.statusCode >= 300) {
@@ -51,7 +55,13 @@ const request = async ({ hostname, path = '/', method = 'GET', payload = null, i
         req.on('error', reject);
 
         if (payload && method !== 'GET') {
-            req.write(JSON.stringify(payload));
+            const payloadData = (() => {
+                if (isJson) {
+                    return JSON.stringify(payload);
+                }
+                return payload;
+            })();
+            req.write(payloadData);
         }
 
         req.end();
