@@ -46,7 +46,7 @@ const request = async ({ hostname, path = '/', method = 'GET', payload = null })
         req.on('error', reject);
 
         if (payload && method !== 'GET') {
-            req.write(payload);
+            req.write(JSON.stringify(payload));
         }
 
         req.end();
