@@ -13,15 +13,15 @@ const pathChecker = (path) => {
 
 
 const request = async ({ hostname, path = '/', method = 'GET', payload = null, isJson = false, headers = {} }) => {
-    const isHttps = hostname.startsWith('https://');
+    const urlParts = new URL(hostname);
 
+    const isHttps = urlParts.protocol === 'https:';
     const lib = isHttps ? https : http;
-    const domain = hostname.split('://')[1];
 
     const options = {
         method,
-        hostname: domain,
-        port: isHttps ? 443 : 80,
+        hostname: urlParts.hostname,
+        port: (urlParts.port || (isHttps ? 443 : 80)),
         path: pathChecker(path),
         headers: {
             'User-Agent': 'AOS',
